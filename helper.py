@@ -1,3 +1,7 @@
+from tqdm import tqdm
+from multiprocessing import Pool
+import pickle, os
+
 def chunk_apply(func, chunk):
     """Apply func to all elements in chunk"""
     return [func(i) for i in tqdm(chunk)]
